@@ -1,0 +1,135 @@
+{
+  "contractName": "TokenController",
+  "source": "./contracts/TokenController.sol",
+  "compilerOutput": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_from",
+            "type": "address"
+          },
+          {
+            "name": "_to",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "onTransfer",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_owner",
+            "type": "address"
+          },
+          {
+            "name": "_spender",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "onApprove",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_owner",
+            "type": "address"
+          }
+        ],
+        "name": "proxyPayment",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ],
+    "evm": {
+      "bytecode": {
+        "object": "",
+        "sourceMap": ""
+      },
+      "deployedBytecode": {
+        "object": "",
+        "sourceMap": ""
+      },
+      "methodIdentifiers": {
+        "onApprove(address,address,uint256)": "da682aeb",
+        "onTransfer(address,address,uint256)": "4a393149",
+        "proxyPayment(address)": "f48c3054"
+      }
+    }
+  },
+  "sources": {
+    "./contracts/TokenController.sol": {
+      "id": 3,
+      "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
+      "file": "/Users/edu/Giveth/minime/contracts/TokenController.sol"
+    }
+  },
+  "compiler": {
+    "name": "solc",
+    "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
+    "version": "0.4.18+commit.9cf6e910",
+    "settings": {
+      "remappings": [
+        "./Controlled.sol=./contracts/Controlled.sol",
+        "./TokenController.sol=./contracts/TokenController.sol",
+        "MiniMeToken.sol=./contracts/MiniMeToken.sol"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "useLiteralContent": true
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "metadata",
+            "evm.bytecode.object",
+            "evm.bytecode.sourceMap",
+            "abi",
+            "evm.methodIdentifiers",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.sourceMap"
+          ]
+        }
+      }
+    }
+  }
+}

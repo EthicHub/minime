@@ -1,0 +1,95 @@
+{
+  "contractName": "Controlled",
+  "source": "./contracts/Controlled.sol",
+  "compilerOutput": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newController",
+            "type": "address"
+          }
+        ],
+        "name": "changeController",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "controller",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      }
+    ],
+    "evm": {
+      "bytecode": {
+        "object": "6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556101668061003b6000396000f30060606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633cebb8238114610050578063f77c47911461007e575b600080fd5b341561005b57600080fd5b61007c73ffffffffffffffffffffffffffffffffffffffff600435166100ba565b005b341561008957600080fd5b61009161011e565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100e257600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b60005473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058201d477e684afaff70a8ed6b40f2f0356af0f4b1bf884fd1ca98b039a704a919cb0029",
+        "sourceMap": "26:548:0:-;;;274:56;;;;;;;;305:10;:23;;-1:-1:-1;;;;;318:10:0;305:23;-1:-1:-1;;;;;;305:23:0;;;;;;26:548;;;;;;"
+      },
+      "deployedBytecode": {
+        "object": "60606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633cebb8238114610050578063f77c47911461007e575b600080fd5b341561005b57600080fd5b61007c73ffffffffffffffffffffffffffffffffffffffff600435166100ba565b005b341561008957600080fd5b61009161011e565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100e257600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b60005473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058201d477e684afaff70a8ed6b40f2f0356af0f4b1bf884fd1ca98b039a704a919cb0029",
+        "sourceMap": "26:548:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:116;;;;;;;;;;;;;;;;;;242:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:116;219:10;;205;219;205:24;;;219:10;;205:24;197:33;;;;;;538:10;:27;;-1:-1:-1;;538:27:0;;;;;;;;;;;;456:116::o;242:25::-;;;;;;:::o"
+      },
+      "methodIdentifiers": {
+        "changeController(address)": "3cebb823",
+        "controller()": "f77c4791"
+      }
+    }
+  },
+  "sources": {
+    "./contracts/Controlled.sol": {
+      "id": 0,
+      "keccak256": "0x770798704985a4588762ea932b913bc1df01b4625ab86c5a7278883bbde44b78",
+      "file": "/Users/edu/Giveth/minime/contracts/Controlled.sol"
+    }
+  },
+  "compiler": {
+    "name": "solc",
+    "keccak256": "0x770798704985a4588762ea932b913bc1df01b4625ab86c5a7278883bbde44b78",
+    "version": "0.4.18+commit.9cf6e910",
+    "settings": {
+      "remappings": [
+        "./Controlled.sol=./contracts/Controlled.sol",
+        "./TokenController.sol=./contracts/TokenController.sol",
+        "MiniMeToken.sol=./contracts/MiniMeToken.sol"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "useLiteralContent": true
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "metadata",
+            "evm.bytecode.object",
+            "evm.bytecode.sourceMap",
+            "abi",
+            "evm.methodIdentifiers",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.sourceMap"
+          ]
+        }
+      }
+    }
+  }
+}

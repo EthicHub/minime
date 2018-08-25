@@ -1,0 +1,110 @@
+{
+  "contractName": "Owned",
+  "source": "./contracts/SampleCampaign-TokenController.sol",
+  "compilerOutput": {
+    "abi": [
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "changeOwner",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      }
+    ],
+    "evm": {
+      "bytecode": {
+        "object": "6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556101668061003b6000396000f30060606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058200c224012c5058fbdef46525e5f7b88f8313e52d55b0d48900aa49f0715e15bb80029",
+        "sourceMap": "1158:634:2:-;;;1434:39;;;;;;;;1453:5;:18;;-1:-1:-1;;;;;1461:10:2;1453:18;-1:-1:-1;;;;;;1453:18:2;;;;;;1158:634;;;;;;"
+      },
+      "deployedBytecode": {
+        "object": "60606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058200c224012c5058fbdef46525e5f7b88f8313e52d55b0d48900aa49f0715e15bb80029",
+        "sourceMap": "1158:634:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;1334:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1706:84;;;;;;;;;;;;;;;;;;1334:20;;;;;;:::o;1706:84::-;1316:5;;1302:10;1316:5;1302:19;;;1316:5;;1302:19;1293:29;;;;;;1766:5;:17;;-1:-1:-1;;1766:17:2;;;;;;;;;;;;1706:84::o"
+      },
+      "methodIdentifiers": {
+        "changeOwner(address)": "a6f9dae1",
+        "owner()": "8da5cb5b"
+      }
+    }
+  },
+  "sources": {
+    "./contracts/Controlled.sol": {
+      "id": 0,
+      "keccak256": "0x770798704985a4588762ea932b913bc1df01b4625ab86c5a7278883bbde44b78",
+      "file": "/Users/edu/Giveth/minime/contracts/Controlled.sol"
+    },
+    "./contracts/MiniMeToken.sol": {
+      "id": 1,
+      "keccak256": "0x5e98063ce7b6a58d41e2d7dfbe651527e2cfaf255f0fe82538783c121259e77f",
+      "file": "/Users/edu/Giveth/minime/contracts/MiniMeToken.sol"
+    },
+    "./contracts/SampleCampaign-TokenController.sol": {
+      "id": 2,
+      "keccak256": "0xf442c850e56095399f35b12ccec5469d36276578632a998f48d094f9844c817b",
+      "file": "/Users/edu/Giveth/minime/contracts/SampleCampaign-TokenController.sol"
+    },
+    "./contracts/TokenController.sol": {
+      "id": 3,
+      "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
+      "file": "/Users/edu/Giveth/minime/contracts/TokenController.sol"
+    }
+  },
+  "compiler": {
+    "name": "solc",
+    "keccak256": "0xf442c850e56095399f35b12ccec5469d36276578632a998f48d094f9844c817b",
+    "version": "0.4.18+commit.9cf6e910",
+    "settings": {
+      "remappings": [
+        "./Controlled.sol=./contracts/Controlled.sol",
+        "./TokenController.sol=./contracts/TokenController.sol",
+        "MiniMeToken.sol=./contracts/MiniMeToken.sol"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "useLiteralContent": true
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "metadata",
+            "evm.bytecode.object",
+            "evm.bytecode.sourceMap",
+            "abi",
+            "evm.methodIdentifiers",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.sourceMap"
+          ]
+        }
+      }
+    }
+  }
+}

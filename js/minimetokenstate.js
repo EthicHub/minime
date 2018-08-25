@@ -19,6 +19,7 @@ class MiniMeTokenState {
       this.$token.$web3.eth.getAccounts(),
     ]);
 
+    /* eslint-disable prefer-destructuring */
     st.name = res[0];
     st.decimals = res[1];
     st.controller = res[2];
@@ -41,4 +42,3 @@ class MiniMeTokenState {
 }
 
 module.exports = MiniMeTokenState;
-

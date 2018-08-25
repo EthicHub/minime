@@ -1,5 +1,4 @@
-
-//File: contracts/Controlled.sol
+/* file: ./Controlled.sol */
 pragma solidity ^0.4.18;
 
 contract Controlled {
@@ -18,7 +17,8 @@ contract Controlled {
     }
 }
 
-//File: contracts/TokenController.sol
+/* eof (./Controlled.sol) */
+/* file: ./TokenController.sol */
 pragma solidity ^0.4.18;
 
 /// @dev The token controller contract must implement these functions
@@ -46,7 +46,8 @@ contract TokenController {
         returns(bool);
 }
 
-//File: contracts/MiniMeToken.sol
+/* eof (./TokenController.sol) */
+/* file: MiniMeToken.sol */
 pragma solidity ^0.4.18;
 
 /*
@@ -73,8 +74,6 @@ pragma solidity ^0.4.18;
 ///  and DApps to upgrade their features in a decentralized manner without
 ///  affecting the original token
 /// @dev It is ERC20 compliant, but still needs to under go further testing.
-
-
 
 
 contract ApproveAndCallFallBack {
@@ -612,7 +611,8 @@ contract MiniMeTokenFactory {
     }
 }
 
-//File: ./contracts/SampleCampaign-TokenController.sol
+/* eof (MiniMeToken.sol) */
+/* file: ./contracts/SampleCampaign-TokenController.sol */
 pragma solidity ^0.4.6;
 
 /*
@@ -638,7 +638,6 @@ pragma solidity ^0.4.6;
 ///  Contract. This version specifically acts as a Campaign manager for raising
 ///  funds for non-profit causes, but it can be customized for any variety of
 ///  purposes.
-
 
 
 
@@ -798,3 +797,5 @@ contract Campaign is TokenController, Owned {
     }
 
 }
+
+/* eof (./contracts/SampleCampaign-TokenController.sol) */

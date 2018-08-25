@@ -1,0 +1,96 @@
+{
+  "contractName": "ApproveAndCallFallBack",
+  "source": "./contracts/MiniMeToken.sol",
+  "compilerOutput": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          },
+          {
+            "name": "_token",
+            "type": "address"
+          },
+          {
+            "name": "_data",
+            "type": "bytes"
+          }
+        ],
+        "name": "receiveApproval",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "evm": {
+      "bytecode": {
+        "object": "",
+        "sourceMap": ""
+      },
+      "deployedBytecode": {
+        "object": "",
+        "sourceMap": ""
+      },
+      "methodIdentifiers": {
+        "receiveApproval(address,uint256,address,bytes)": "8f4ffcb1"
+      }
+    }
+  },
+  "sources": {
+    "./contracts/Controlled.sol": {
+      "id": 0,
+      "keccak256": "0x770798704985a4588762ea932b913bc1df01b4625ab86c5a7278883bbde44b78",
+      "file": "/Users/edu/Giveth/minime/contracts/Controlled.sol"
+    },
+    "./contracts/MiniMeToken.sol": {
+      "id": 1,
+      "keccak256": "0x5e98063ce7b6a58d41e2d7dfbe651527e2cfaf255f0fe82538783c121259e77f",
+      "file": "/Users/edu/Giveth/minime/contracts/MiniMeToken.sol"
+    },
+    "./contracts/TokenController.sol": {
+      "id": 3,
+      "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
+      "file": "/Users/edu/Giveth/minime/contracts/TokenController.sol"
+    }
+  },
+  "compiler": {
+    "name": "solc",
+    "keccak256": "0x5e98063ce7b6a58d41e2d7dfbe651527e2cfaf255f0fe82538783c121259e77f",
+    "version": "0.4.18+commit.9cf6e910",
+    "settings": {
+      "remappings": [
+        "./Controlled.sol=./contracts/Controlled.sol",
+        "./TokenController.sol=./contracts/TokenController.sol",
+        "MiniMeToken.sol=./contracts/MiniMeToken.sol"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "useLiteralContent": true
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "metadata",
+            "evm.bytecode.object",
+            "evm.bytecode.sourceMap",
+            "abi",
+            "evm.methodIdentifiers",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.sourceMap"
+          ]
+        }
+      }
+    }
+  }
+}

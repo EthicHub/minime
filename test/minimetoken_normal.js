@@ -1,21 +1,20 @@
 /* eslint-env mocha */
 /* eslint-disable no-await-in-loop */
-const TestRPC = require('ethereumjs-testrpc');
+const GANACHECLI = require('ganache-cli');
 const Web3 = require('web3');
 const chai = require('chai');
 
-const MiniMeToken = require('../index.js').MiniMeToken;
-const MiniMeTokenFactory = require('../index.js').MiniMeTokenFactory;
-const MiniMeTokenState = require('../index.js').MiniMeTokenState;
+const { MiniMeToken, MiniMeTokenFactory } = require('../js/contracts');
+const MiniMeTokenState = require('../js/minimetokenstate');
 
-const assert = chai.assert;
+const assert = chai.assert; // eslint-disable-line prefer-destructuring
 const { utils } = Web3;
 
 const verbose = false;
 
 const log = (S) => {
   if (verbose) {
-    console.log(S);
+    console.log(S); // eslint-disable-line no-console
   }
 };
 
@@ -29,7 +28,7 @@ const log = (S) => {
 // b[6]  ->  0, 2, 5. 0
 
 describe('MiniMeToken test', () => {
-  let testrpc;
+  let ganache;
   let web3;
   let accounts;
   let miniMeToken;
@@ -39,20 +38,20 @@ describe('MiniMeToken test', () => {
   const b = [];
 
   before(async () => {
-    testrpc = TestRPC.server({
+    ganache = GANACHECLI.server({
       ws: true,
       gasLimit: 5800000,
       total_accounts: 10,
     });
 
-    testrpc.listen(8546, '127.0.0.1');
+    ganache.listen(8546, '127.0.0.1');
 
     web3 = new Web3('ws://localhost:8546');
     accounts = await web3.eth.getAccounts();
   });
 
   after((done) => {
-    testrpc.close();
+    ganache.close();
     done();
   });
 
@@ -146,7 +145,8 @@ describe('MiniMeToken test', () => {
       18,
       'MMTc',
       0,
-      true);
+      true,
+    );
 
     let addr = miniMeTokenCloneTx.events.NewCloneToken.raw.topics[1];
     addr = `0x${addr.slice(26)}`;
