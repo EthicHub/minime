@@ -1,5 +1,4 @@
-
-//File: contracts/Controlled.sol
+/* file: ./contracts/Controlled.sol */
 pragma solidity ^0.4.18;
 
 contract Controlled {
@@ -18,7 +17,8 @@ contract Controlled {
     }
 }
 
-//File: contracts/TokenController.sol
+/* eof (./contracts/Controlled.sol) */
+/* file: ./contracts/TokenController.sol */
 pragma solidity ^0.4.18;
 
 /// @dev The token controller contract must implement these functions
@@ -46,7 +46,8 @@ contract TokenController {
         returns(bool);
 }
 
-//File: ./contracts/MiniMeToken.sol
+/* eof (./contracts/TokenController.sol) */
+/* file: ./contracts/MiniMeToken.sol */
 pragma solidity ^0.4.18;
 
 /*
@@ -73,8 +74,6 @@ pragma solidity ^0.4.18;
 ///  and DApps to upgrade their features in a decentralized manner without
 ///  affecting the original token
 /// @dev It is ERC20 compliant, but still needs to under go further testing.
-
-
 
 
 contract ApproveAndCallFallBack {
@@ -611,3 +610,5 @@ contract MiniMeTokenFactory {
         return newToken;
     }
 }
+
+/* eof (./contracts/MiniMeToken.sol) */

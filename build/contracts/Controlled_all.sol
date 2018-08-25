@@ -1,5 +1,4 @@
-
-//File: ./contracts/Controlled.sol
+/* file: ./contracts/Controlled.sol */
 pragma solidity ^0.4.18;
 
 contract Controlled {
@@ -17,3 +16,5 @@ contract Controlled {
         controller = _newController;
     }
 }
+
+/* eof (./contracts/Controlled.sol) */

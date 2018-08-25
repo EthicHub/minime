@@ -1,5 +1,4 @@
-
-//File: ./contracts/TokenController.sol
+/* file: ./contracts/TokenController.sol */
 pragma solidity ^0.4.18;
 
 /// @dev The token controller contract must implement these functions
@@ -26,3 +25,5 @@ contract TokenController {
     function onApprove(address _owner, address _spender, uint _amount) public
         returns(bool);
 }
+
+/* eof (./contracts/TokenController.sol) */
