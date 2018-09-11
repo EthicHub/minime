@@ -4,13 +4,19 @@ const GANACHECLI = require('ganache-cli');
 const Web3 = require('web3');
 const chai = require('chai');
 
-const { MiniMeToken, MiniMeTokenFactory } = require('../js/contracts');
+const {
+  MiniMeToken,
+  MiniMeTokenFactory,
+  MockFutureMiniMeToken,
+  MockFutureMiniMeTokenFactory
+} = require('../js/contracts');
+
 const MiniMeTokenState = require('../js/minimetokenstate');
 
 const assert = chai.assert; // eslint-disable-line prefer-destructuring
 const { utils } = Web3;
 
-const verbose = false;
+const verbose = true;
 
 const log = (S) => {
   if (verbose) {
@@ -35,6 +41,9 @@ describe('MiniMeToken test', () => {
   let miniMeTokenState;
   let miniMeTokenClone;
   let miniMeTokenCloneState;
+  let upgradedMiniMeTokenClone;
+  let upgradedMiniMeTokenCloneState;
+
   const b = [];
 
   before(async () => {
@@ -149,8 +158,11 @@ describe('MiniMeToken test', () => {
     );
 
     let addr = miniMeTokenCloneTx.events.NewCloneToken.raw.topics[1];
+    console.log("First clone")
+    console.log(miniMeTokenCloneTx.events.NewCloneToken.raw.topics)
     addr = `0x${addr.slice(26)}`;
     addr = utils.toChecksumAddress(addr);
+    console.log(addr)
     miniMeTokenClone = new MiniMeToken(web3, addr);
 
     miniMeTokenCloneState = new MiniMeTokenState(miniMeTokenClone);
@@ -215,4 +227,48 @@ describe('MiniMeToken test', () => {
     assert.equal(st.balances[accounts[1]], 12);
     assert.equal(st.balances[accounts[2]], 5);
   });
+
+  it('Should set new tokenFactory', async () => {
+    const newTokenFactory = await MockFutureMiniMeTokenFactory.new(web3);
+    assert.ok(newTokenFactory.$address);
+    await miniMeToken.setTokenFactory(newTokenFactory.$address);
+    assert.equal(newTokenFactory.$address, await miniMeToken.tokenFactory());
+  });
+
+  it('Should generate upgraded tokens', async () => {
+    console.log(await web3.eth.getBlockNumber())
+    const miniMeTokenCloneTx = await miniMeToken.createCloneToken(
+      'Clone Token 2',
+      18,
+      'ETHIX',
+      0,
+      true,
+    );
+
+    let addr = miniMeTokenCloneTx.events.NewCloneToken.raw.topics[1];
+    console.log(miniMeTokenCloneTx.events.NewCloneToken.raw.topics)
+    addr = `0x${addr.slice(26)}`;
+    console.log(addr)
+    addr = utils.toChecksumAddress(addr);
+    upgradedMiniMeTokenClone = new MockFutureMiniMeToken(web3, addr);
+    b[6] = await web3.eth.getBlockNumber();
+    log(`b[6]->  ${b[6]}`);
+    upgradedMiniMeTokenCloneState = new MiniMeTokenState(miniMeTokenClone);
+    const st = await upgradedMiniMeTokenCloneState.getState();
+
+    assert.equal(st.parentToken, miniMeToken.$address);
+    assert.equal(st.parentSnapShotBlock, b[6]);
+    //assert.equal(st.totalSupply, 7);
+    //assert.equal(st.balances[accounts[1]], 6);
+
+    //const totalSupply = await upgradedMiniMeTokenCloneState.totalSupplyAt(b[4]);
+
+    //assert.equal(totalSupply, 7);
+
+    //const balance = await upgradedMiniMeTokenCloneState.balanceOfAt(accounts[2], b[4]);
+    //assert.equal(balance, 1);
+
+    let goal = await upgradedMiniMeTokenClone.achieveDecentralizedWorld()
+    assert.equal(goal,'decentralization achieved')
+  }).timeout(6000);
 });
