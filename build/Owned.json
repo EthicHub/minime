@@ -40,12 +40,12 @@
     ],
     "evm": {
       "bytecode": {
-        "object": "6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556101668061003b6000396000f30060606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058200c224012c5058fbdef46525e5f7b88f8313e52d55b0d48900aa49f0715e15bb80029",
-        "sourceMap": "1158:634:2:-;;;1434:39;;;;;;;;1453:5;:18;;-1:-1:-1;;;;;1461:10:2;1453:18;-1:-1:-1;;;;;;1453:18:2;;;;;;1158:634;;;;;;"
+        "object": "6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556101668061003b6000396000f30060606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058206574110f8de78ffbde745e3e880bfeccca66a8c90f8ea28cbad7e60bd0e435f70029",
+        "sourceMap": "1158:634:3:-;;;1434:39;;;;;;;;1453:5;:18;;-1:-1:-1;;;;;1461:10:3;1453:18;-1:-1:-1;;;;;;1453:18:3;;;;;;1158:634;;;;;;"
       },
       "deployedBytecode": {
-        "object": "60606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058200c224012c5058fbdef46525e5f7b88f8313e52d55b0d48900aa49f0715e15bb80029",
-        "sourceMap": "1158:634:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;1334:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1706:84;;;;;;;;;;;;;;;;;;1334:20;;;;;;:::o;1706:84::-;1316:5;;1302:10;1316:5;1302:19;;;1316:5;;1302:19;1293:29;;;;;;1766:5;:17;;-1:-1:-1;;1766:17:2;;;;;;;;;;;;1706:84::o"
+        "object": "60606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008c575b600080fd5b341561005b57600080fd5b6100636100ba565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009757600080fd5b6100b873ffffffffffffffffffffffffffffffffffffffff600435166100d6565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146100fe57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff929092169190911790555600a165627a7a723058206574110f8de78ffbde745e3e880bfeccca66a8c90f8ea28cbad7e60bd0e435f70029",
+        "sourceMap": "1158:634:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;1334:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1706:84;;;;;;;;;;;;;;;;;;1334:20;;;;;;:::o;1706:84::-;1316:5;;1302:10;1316:5;1302:19;;;1316:5;;1302:19;1293:29;;;;;;1766:5;:17;;-1:-1:-1;;1766:17:3;;;;;;;;;;;;1706:84::o"
       },
       "methodIdentifiers": {
         "changeOwner(address)": "a6f9dae1",
@@ -57,22 +57,27 @@
     "./contracts/Controlled.sol": {
       "id": 0,
       "keccak256": "0x770798704985a4588762ea932b913bc1df01b4625ab86c5a7278883bbde44b78",
-      "file": "/Users/edu/Giveth/minime/contracts/Controlled.sol"
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/Controlled.sol"
     },
     "./contracts/MiniMeToken.sol": {
       "id": 1,
-      "keccak256": "0x5e98063ce7b6a58d41e2d7dfbe651527e2cfaf255f0fe82538783c121259e77f",
-      "file": "/Users/edu/Giveth/minime/contracts/MiniMeToken.sol"
+      "keccak256": "0x818e3d9167eed5e6ba516ec6166842474dc734bb18075be40925aa1e58cb21f7",
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/MiniMeToken.sol"
     },
     "./contracts/SampleCampaign-TokenController.sol": {
-      "id": 2,
+      "id": 3,
       "keccak256": "0xf442c850e56095399f35b12ccec5469d36276578632a998f48d094f9844c817b",
-      "file": "/Users/edu/Giveth/minime/contracts/SampleCampaign-TokenController.sol"
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/SampleCampaign-TokenController.sol"
     },
     "./contracts/TokenController.sol": {
-      "id": 3,
+      "id": 5,
       "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
-      "file": "/Users/edu/Giveth/minime/contracts/TokenController.sol"
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/TokenController.sol"
+    },
+    "./contracts/TokenFactory.sol": {
+      "id": 6,
+      "keccak256": "0xf64d9320ae9e43c01f4e54322fc08b18fe7261ed0e33060561a15d9b2b4bb70d",
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/TokenFactory.sol"
     }
   },
   "compiler": {
@@ -83,6 +88,7 @@
       "remappings": [
         "./Controlled.sol=./contracts/Controlled.sol",
         "./TokenController.sol=./contracts/TokenController.sol",
+        "./TokenFactory.sol=./contracts/TokenFactory.sol",
         "MiniMeToken.sol=./contracts/MiniMeToken.sol"
       ],
       "optimizer": {

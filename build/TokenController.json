@@ -95,9 +95,9 @@
   },
   "sources": {
     "./contracts/TokenController.sol": {
-      "id": 3,
+      "id": 5,
       "keccak256": "0xf8bf7de20c0412ab90ec43c1432508a8316e17bd246adffa737e0d779413ff5e",
-      "file": "/Users/edu/Giveth/minime/contracts/TokenController.sol"
+      "file": "/Users/raul/Development/gitrepos/EthicHub/edu-minime/contracts/TokenController.sol"
     }
   },
   "compiler": {
@@ -108,6 +108,7 @@
       "remappings": [
         "./Controlled.sol=./contracts/Controlled.sol",
         "./TokenController.sol=./contracts/TokenController.sol",
+        "./TokenFactory.sol=./contracts/TokenFactory.sol",
         "MiniMeToken.sol=./contracts/MiniMeToken.sol"
       ],
       "optimizer": {
